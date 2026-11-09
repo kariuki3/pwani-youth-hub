@@ -1,0 +1,53 @@
+/* Pwani Youth Hub — one shared stylesheet for every page */
+/* Defines reusable CSS variables for the website's colours, shadows, border radius, and content width. */
+:root {
+    --green: #14532D;
+    --green-dark: #0D3B22;
+    --green-mid: #17623A;
+    --orange: #F97316;
+    --orange-dark: #EA580C;
+    --ink: #263238;
+    --muted: #64748B;
+    --paper: #FFFFFF;
+    --surface: #F4F7F8;
+    --line: #E2E8F0;
+    --shadow: 0 10px 28px rgba(15, 23, 42, .09);
+    --radius: 14px;
+    --content: 1180px;
+}
+/* Applies border-box sizing globally so padding and borders are included in element dimensions. */
+* { box-sizing: border-box; }
+/* Enables smooth scrolling for in-page navigation. */
+html { scroll-behavior: smooth; }
+/* Sets the default page margin, font, text colour, background, and line spacing. */
+body {
+    margin: 0;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+}
+/* Makes images block elements and keeps them within their parent containers. */
+img { display: block; max-width: 100%; }
+/* Makes links inherit the surrounding text colour and removes underlines. */
+a { color: inherit; text-decoration: none; }
+/* Makes buttons and form controls inherit the site's font. */
+button, input, select, textarea { font: inherit; }
+/* Styles the main header with a green background, white text, stacking order, and shadow. */
+.site-header {
+    position: relative;
+    z-index: 10;
+    background: var(--green);
+    color: white;
+    box-shadow: 0 3px 14px rgba(0,0,0,.12);
+}
+/* Controls the header content width, height, centring, Flexbox layout, alignment, and spacing. */
+.header-inner {
+    width: min(100% - 48px, var(--content));
+    min-height: 88px;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 28px;
+}
