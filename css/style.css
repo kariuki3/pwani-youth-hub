@@ -51,3 +51,86 @@ button, input, select, textarea { font: inherit; }
     justify-content: space-between;
     gap: 28px;
 }
+/* Arranges and styles the logo mark and Pwani Youth Hub name. */
+.brand { display: inline-flex; align-items: center; gap: 11px; padding-bottom: 18px; font-size: 23px; font-weight: 800; letter-spacing: -.4px; }
+ 
+/* Creates the orange logo square and centres its letter using CSS Grid. */
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; color: var(--green); background: var(--orange); font-weight: 900; }
+ 
+/* Arranges navigation list items horizontally and removes default list styling and spacing. */
+.site-nav ul { display: flex; align-items: center; gap: 8px; list-style: none; padding: 0 0 13px; margin: 0; }
+ 
+/* Styles navigation links, including their padding, colour, typography, rounded corners, and transition. */
+.site-nav a { display: block; padding: 10px 15px; border-radius: 7px; color: white; font-size: 15px; font-weight: 700; transition: background .2s ease, color .2s ease; }
+ 
+/* Highlights a navigation link when hovered or when it represents the current page. */
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: white; background: rgba(255,255,255,.13); }
+ 
+/* Adds an orange inset underline to the current page's navigation link. */
+.site-nav a[aria-current="page"] { box-shadow: inset 0 -3px var(--orange); border-radius: 7px 7px 0 0; }
+ 
+/* Provides shared positioning, grid centring, text alignment, colour, and background-image behaviour for hero sections. */
+.hero, .page-hero { position: relative; isolation: isolate; display: grid; place-items: center; text-align: center; color: white; background-position: center; background-size: cover; }
+ 
+/* Sets the home hero's minimum height, padding, and background image. */
+.hero { min-height: 560px; padding: 90px 24px; background-image: url("../images/hero_bg1.webp"); }
+ 
+/* Places a dark gradient overlay over the hero image to improve text contrast. */
+.hero-shade { position: absolute; z-index: -1; inset: 0; background: linear-gradient(110deg, rgba(8,49,27,.88), rgba(15,84,46,.66)); }
+ 
+/* Limits the width of hero content for readability. */
+.hero-content, .page-hero-content { max-width: 850px; }
+ 
+/* Styles the main home-page heading with responsive typography and spacing. */
+.hero h1 { margin: 12px 0 18px; color: white; font-size: clamp(2.5rem, 5.2vw, 4.4rem); line-height: 1.12; font-weight: 800; letter-spacing: -1.5px; }
+ 
+/* Sets the width, spacing, colour, and size of hero description text. */
+.hero p, .page-hero p { max-width: 720px; margin: 0 auto 28px; color: rgba(255,255,255,.94); font-size: 18px; }
+ 
+/* Styles small uppercase section labels with orange text and letter spacing. */
+.eyebrow { display: inline-block; color: var(--orange-dark); font-size: 12px; font-weight: 900; letter-spacing: 1.8px; text-transform: uppercase; }
+ 
+/* Changes an eyebrow label to a light orange colour for dark backgrounds. */
+.eyebrow-light { color: #FFD2B3; }
+ 
+/* Uses Flexbox to centre hero buttons and lets them wrap when necessary. */
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+ 
+/* Defines shared button layout, dimensions, padding, border, shape, typography, and transition. */
+.btn { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 24px; border: 2px solid transparent; border-radius: 7px; font-weight: 800; cursor: pointer; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+ 
+/* Moves buttons slightly upward on hover. */
+.btn:hover { transform: translateY(-2px); }
+ 
+/* Styles the primary button with white text and an orange background. */
+.btn-primary { color: white; background: var(--orange); }
+ 
+/* Darkens the primary button background on hover. */
+.btn-primary:hover { background: var(--orange-dark); }
+ 
+/* Styles a transparent button with a white border and white text. */
+.btn-outline { color: white; border-color: rgba(255,255,255,.85); background: transparent; }
+ 
+/* Changes the outlined button to a white background with green text on hover. */
+.btn-outline:hover { color: var(--green); background: white; }
+ 
+/* Styles a light button with a white background and green text. */
+.btn-light { color: var(--green); background: white; }
+ 
+/* Changes the light button background on hover. */
+.btn-light:hover { background: #FFF0E5; }
+ 
+/* Creates a centred content container with a maximum width and vertical padding. */
+.section-wrap { width: min(100% - 48px, var(--content)); margin: 0 auto; padding-top: 82px; padding-bottom: 82px; }
+ 
+/* Creates a full-width tinted section while aligning its content with the main site width. */
+.section-tint { width: 100%; max-width: none; padding-left: max(24px, calc((100% - var(--content))/2)); padding-right: max(24px, calc((100% - var(--content))/2)); background: var(--surface); }
+ 
+/* Centres section headings and controls their maximum width and bottom spacing. */
+.section-heading { max-width: 720px; margin: 0 auto 38px; text-align: center; }
+ 
+/* Styles headings in section, introduction, and contact areas. */
+.section-heading h2, .intro-copy h2, .contact-copy h2 { margin: 8px 0 12px; color: var(--green); font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; font-weight: 800; }
+ 
+/* Styles the description beneath a section heading. */
+.section-heading p { margin: 0; color: var(--muted); }
