@@ -134,3 +134,405 @@ button, input, select, textarea { font: inherit; }
  
 /* Styles the description beneath a section heading. */
 .section-heading p { margin: 0; color: var(--muted); }
+/* Creates a two-column Grid layout for introduction text and image. */
+.intro-section { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }
+
+/* Sets the paragraph colour in the introduction text. */
+.intro-copy p { color: #52616B; }
+
+/* Provides a positioning context for the introduction image and its decorative accent. */
+.intro-image { position: relative; }
+
+/* Sizes, crops, rounds, and adds a shadow to the introduction image. */
+.intro-image img { position: relative; z-index: 1; width: 100%; height: 390px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* Creates a decorative orange shape beside the introduction image. */
+.image-accent { position: absolute; right: -14px; bottom: -14px; width: 45%; height: 45%; border-radius: var(--radius); background: var(--orange); }
+
+/* Displays text links with Flexbox alignment, spacing, and green emphasis. */
+.text-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--green); font-weight: 900; }
+
+/* Changes text-link colour on hover. */
+.text-link:hover { color: var(--orange-dark); }
+
+/* Creates a three-column Grid for feature cards. */
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* Applies shared card styling, including clipped overflow, rounded corners, white backgrounds, shadows, and transitions. */
+.feature-card, .programme-card, .way-card { overflow: hidden; border-radius: var(--radius); background: white; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
+
+/* Raises cards and strengthens their shadows on hover. */
+.feature-card:hover, .programme-card:hover, .way-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(15,23,42,.13); }
+
+/* Adds padding and centres feature-card content. */
+.feature-card { padding: 24px; text-align: center; }
+
+/* Styles feature-card headings. */
+.feature-card h3 { margin: 0 0 15px; color: var(--green); font-size: 20px; }
+
+/* Sets consistent dimensions and image cropping for feature cards. */
+.feature-card img { width: 100%; height: 190px; object-fit: cover; border-radius: 9px; }
+
+/* Styles feature-card descriptions and their spacing. */
+.feature-card p { margin: 16px 0 0; color: #596773; }
+
+/* Centres an action or button below a content group. */
+.center-action { margin-top: 34px; text-align: center; }
+
+/* Places a heading and related link in a horizontal Flexbox row. */
+.heading-row { display: flex; align-items: end; justify-content: space-between; gap: 24px; max-width: none; text-align: left; }
+
+/* Prevents the link in a heading row from wrapping. */
+.heading-row .text-link { white-space: nowrap; }
+
+/* Creates a four-column Grid for the home-page gallery preview. */
+.preview-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+/* Sets preview image dimensions, cropping, and rounded corners. */
+.preview-gallery img { width: 100%; height: 210px; object-fit: cover; border-radius: 10px; }
+
+/* Styles the home call-to-action section with a green gradient and centred white text. */
+.home-cta { padding: 72px 24px; text-align: center; color: white; background: linear-gradient(120deg, var(--green-dark), var(--green-mid)); }
+
+/* Limits and centres the direct content inside the home call-to-action. */
+.home-cta > div { max-width: 760px; margin: auto; }
+
+/* Styles the home call-to-action heading. */
+.home-cta h2 { margin: 9px 0 12px; color: white; font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; }
+
+/* Styles the descriptive text in the home call-to-action. */
+.home-cta p { margin: 0 auto 24px; color: rgba(255,255,255,.9); }
+
+/* Sets the height, padding, and background image for inner-page hero sections. */
+.page-hero { min-height: 360px; padding: 70px 24px; background-image: url("../images/hero_bg.webp"); }
+
+/* Styles the main heading on inner-page hero sections. */
+.page-hero h1 { margin: 8px 0 12px; color: white; font-size: clamp(2.3rem, 4vw, 3.5rem); line-height: 1.15; }
+
+/* Sets the description font size on inner-page hero sections. */
+.page-hero p { font-size: 17px; }
+
+/* Sets the background image for the Programmes page hero. */
+.programmes-hero { background-image: url("../images/hero_bg1.webp"); }
+
+/* Sets the background image for the Gallery page hero. */
+.gallery-hero { background-image: url("../images/hero_bg.webp"); }
+
+/* Sets the background image for the Get Involved page hero. */
+.involvement-hero { background-image: url("../images/group_activity.webp"); }
+
+/* Creates a three-column Grid for programme cards and stretches cards within each row. */
+.programme-grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 25px; }
+
+/* Sets the dimensions and cropping of images at the top of programme cards. */
+.programme-card > img { width: 100%; height: 220px; object-fit: cover; }
+
+/* Adds internal spacing around card text content. */
+.card-body { padding: 25px; }
+
+/* Styles the small uppercase category label inside cards. */
+.card-kicker { color: var(--orange-dark); font-size: 12px; font-weight: 900; letter-spacing: 1.4px; }
+
+/* Styles headings inside programme and involvement cards. */
+.card-body h2, .way-card h2 { margin: 7px 0 10px; color: var(--green); font-size: 22px; line-height: 1.25; }
+
+/* Styles paragraphs inside programme and involvement cards. */
+.card-body p, .way-card p { color: #596773; }
+
+/* Sets indentation and text colour for lists inside programme cards. */
+.card-body ul { padding-left: 20px; color: #596773; }
+
+/* Adds vertical spacing between programme-card list items. */
+.card-body li { margin: 5px 0; }
+
+/* Adds extra bottom spacing to the gallery section. */
+.gallery-section { padding-bottom: 90px; }
+
+/* Creates a four-column Grid for gallery images. */
+.gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+
+/* Styles each gallery figure with rounded corners, clipped overflow, a white background, and a shadow. */
+.gallery-item { overflow: hidden; margin: 0; border-radius: 10px; background: white; box-shadow: 0 5px 18px rgba(15,23,42,.08); }
+
+/* Sets gallery image dimensions and a smooth zoom transition. */
+.gallery-item img { width: 100%; height: 210px; object-fit: cover; transition: transform .35s ease; }
+
+/* Slightly enlarges a gallery image when its item is hovered. */
+.gallery-item:hover img { transform: scale(1.045); }
+
+/* Styles the caption beneath each gallery image. */
+.gallery-item figcaption { padding: 12px 15px; color: var(--green); font-weight: 800; }
+
+/* Creates a three-column Grid for ways to get involved. */
+.ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* Adds internal padding to each ways-to-get-involved card. */
+.way-card { padding: 30px; }
+
+/* Creates a circular numbered marker and centres its number using Grid. */
+.way-number { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; color: var(--orange-dark); background: #FFF0E5; font-weight: 900; }
+
+/* Creates a two-column Grid for contact details and the interest form. */
+.contact-section { display: grid; grid-template-columns: .9fr 1.1fr; align-items: start; gap: 55px; }
+
+/* Styles paragraphs in the contact-information column. */
+.contact-copy p { color: #596773; }
+
+/* Adds spacing above the email, phone, and location details. */
+.contact-details { margin-top: 26px; }
+
+/* Highlights email and phone links in bold green text. */
+.contact-details a { color: var(--green); font-weight: 800; }
+
+/* Styles the interest form panel with padding, border, rounded corners, background, and shadow. */
+.interest-form { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background-color: yellow; box-shadow: var(--shadow); }
+
+/* Styles the heading at the top of the interest form. */
+.interest-form h2 { margin: 0 0 22px; color: var(--green); font-size: 24px; }
+
+/* Adds spacing below each form field group. */
+.form-group { margin-bottom: 17px; }
+
+/* Displays form labels on their own line with spacing and bold text. */
+.form-group label { display: block; margin-bottom: 7px; color: var(--ink); font-weight: 800; }
+
+/* Gives form controls consistent width, padding, border, rounded corners, text colour, and background. */
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 13px; border: 1px solid #CBD5E1; border-radius: 7px; color: var(--ink); background: white; }
+
+/* Highlights the form control currently in focus with an orange border and outline. */
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: 2px solid rgba(249,115,22,.25); border-color: var(--orange); }
+
+/* Allows the message textarea to be resized vertically only. */
+.form-group textarea { resize: vertical; }
+
+/* Styles small helper text associated with a form. */
+.form-note { color: var(--muted); font-size: 13px; }
+
+/* Styles the footer with white text, a dark green background, and spacing. */
+.site-footer { padding: 58px 24px 0; color: white; background: var(--green-dark); }
+
+/* Creates and sizes the footer's four-column Grid. */
+.footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.15fr; gap: 40px; width: min(100%, var(--content)); margin: auto; padding-bottom: 38px; }
+
+/* Styles footer column headings. */
+.footer-inner h3 { margin: 0 0 15px; color: white; font-size: 17px; }
+
+/* Styles the footer brand name as a prominent white link. */
+.footer-brand { display: inline-block; margin-bottom: 12px; color: white; font-size: 23px; font-weight: 900; }
+
+/* Limits and styles the footer's descriptive paragraph. */
+.footer-about p { max-width: 310px; margin: 0; color: rgba(255,255,255,.78); }
+
+/* Removes default list markers, margin, and padding from footer lists. */
+.footer-list { list-style: none; margin: 0; padding: 0; }
+
+/* Adds spacing and readable text colour to footer list items and allows long text to wrap. */
+.footer-list li { margin: 7px 0; color: rgba(255,255,255,.82); overflow-wrap: anywhere; }
+
+/* Changes footer links to light orange on hover. */
+.footer-list a:hover { color: #FFB37F; }
+
+/* Styles and centres the copyright strip below the footer columns. */
+.copyright { width: min(100%, var(--content)); margin: auto; padding: 18px 0; border-top: 1px solid rgba(255,255,255,.2); text-align: center; color: rgba(255,255,255,.78); font-size: 14px; }
+
+/* Removes the default paragraph margin in the copyright strip. */
+.copyright p { margin: 0; }
+
+/* Tablet layout: applies when the viewport is 900px wide or narrower. */
+@media (max-width: 900px) {
+
+    /* Controls the header content width, height, centring, Flexbox layout, alignment, and spacing. */
+    .header-inner { width: min(100% - 32px, var(--content)); align-items: center; flex-direction: column; gap: 0; padding-top: 14px; }
+
+    /* Arranges and styles the logo mark and Pwani Youth Hub name. */
+    .brand { padding: 0 0 8px; }
+
+    /* Arranges navigation list items horizontally and removes default list styling and spacing. */
+    .site-nav ul { flex-wrap: wrap; justify-content: center; padding-bottom: 8px; }
+/* Creates a two-column Grid layout for introduction text and image. */
+    .intro-section { gap: 35px; }
+
+    /* Changes these card grids to two columns at this responsive breakpoint. */
+    .feature-grid, .programme-grid, .ways-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Creates a four-column Grid for gallery images. */
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* Creates and sizes the footer's four-column Grid. */
+    .footer-inner { grid-template-columns: repeat(2, 1fr); }
+}
+/* Small-screen layout: adjusts sections and typography for phones. */
+@media (max-width: 620px) {
+/* Controls the header content width, height, centring, Flexbox layout, alignment, and spacing. */
+    .header-inner { width: calc(100% - 24px); }
+/* Arranges and styles the logo mark and Pwani Youth Hub name. */
+    .brand { font-size: 20px; }
+/* Arranges navigation list items horizontally and removes default list styling and spacing. */
+    .site-nav ul { gap: 2px; }
+/* Styles navigation links, including their padding, colour, typography, rounded corners, and transition. */
+    .site-nav a { padding: 8px 9px; font-size: 13px; }
+/* Sets the home hero's minimum height, padding, and background image. */
+    .hero { min-height: 500px; padding: 70px 20px; }
+/* Styles the main home-page heading with responsive typography and spacing. */
+    .hero h1 { letter-spacing: -.7px; }
+/* Sets the width, spacing, colour, and size of hero description text. */
+    .hero p, .page-hero p { font-size: 16px; }
+/* Creates a centred content container with a maximum width and vertical padding. */
+    .section-wrap { width: calc(100% - 36px); padding-top: 58px; padding-bottom: 58px; }
+/* Creates a full-width tinted section while aligning its content with the main site width. */
+    .section-tint { width: 100%; padding-left: 18px; padding-right: 18px; }
+/* Changes introduction and contact layouts to one column on small screens. */
+    .intro-section, .contact-section { grid-template-columns: 1fr; gap: 30px; }
+/* Sizes, crops, rounds, and adds a shadow to the introduction image. */
+    .intro-image img { height: 280px; }
+/* Changes these card grids to two columns at this responsive breakpoint. */
+    .feature-grid, .programme-grid, .ways-grid { grid-template-columns: 1fr; }
+/* Sets consistent dimensions and image cropping for feature cards. */
+    .feature-card img { height: 210px; }
+/* Places a heading and related link in a horizontal Flexbox row. */
+    .heading-row { align-items: flex-start; flex-direction: column; gap: 8px; }
+/* Creates a four-column Grid for the home-page gallery preview. */
+    .preview-gallery { grid-template-columns: repeat(2, 1fr); }
+/* Sets preview image dimensions, cropping, and rounded corners. */
+    .preview-gallery img { height: 150px; }
+/* Sets the height, padding, and background image for inner-page hero sections. */
+    .page-hero { min-height: 310px; padding: 55px 20px; }
+/* Creates a four-column Grid for gallery images. */
+    .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+/* Sets gallery image dimensions and a smooth zoom transition. */
+    .gallery-item img { height: 145px; }
+/* Styles the caption beneath each gallery image. */
+    .gallery-item figcaption { padding: 9px 10px; font-size: 13px; }
+/* Creates and sizes the footer's four-column Grid. */
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+/* Makes the footer description span both columns on small screens. */
+    .footer-about { grid-column: 1 / -1; }
+/* Styles the interest form panel with padding, border, rounded corners, background, and shadow. */
+    .interest-form { padding: 22px; }
+}
+/* Very small-screen layout: adds adjustments for narrow phones. */
+@media (max-width: 380px) {
+/* Styles navigation links, including their padding, colour, typography, rounded corners, and transition. */
+    .site-nav a { padding: 7px 6px; font-size: 12px; }
+/* Creates a four-column Grid for gallery images. */
+    .gallery-grid { grid-template-columns: 1fr; }
+/* Sets gallery image dimensions and a smooth zoom transition. */
+    .gallery-item img { height: 210px; }
+}
+/* Accessibility: respects the visitor's reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+/* Enables smooth scrolling for in-page navigation. */
+    html { scroll-behavior: auto; }
+/* Shortens transitions and animations for visitors who have enabled reduced motion. */
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* Hide hamburger menu on desktop */
+/* Hides the hamburger menu button by default on desktop screens. */
+.menu-toggle {
+    display: none;
+}
+
+/* MOBILE NAVIGATION */
+
+/* Mobile navigation: applies the dropdown menu layout on screens up to 768px. */
+@media (max-width: 768px) {
+
+    /* Header layout */
+/* Controls the header content width, height, centring, Flexbox layout, alignment, and spacing. */
+    .header-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0;
+        padding: 12px 18px;
+    }
+
+    /* Website logo */
+/* Arranges and styles the logo mark and Pwani Youth Hub name. */
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0;
+    }
+
+/* Creates the orange logo square and centres its letter using CSS Grid. */
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9px;
+    }
+
+    /* Hamburger button */
+/* Hides the hamburger menu button by default on desktop screens. */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 38px;
+        margin: 0;
+        padding: 0;
+        background-color: #F97316;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    /* Navigation dropdown */
+/* Hides the mobile navigation initially and prepares it to span the header width when opened. */
+    .site-nav {
+        display: none;
+        width: 100%;
+        flex-basis: 100%;
+        margin-top: 12px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+/* Displays the mobile navigation when JavaScript adds the active class. */
+    .site-nav.active {
+        display: block;
+    }
+
+    /* Navigation links */
+/* Arranges navigation list items horizontally and removes default list styling and spacing. */
+    .site-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+/* Makes each mobile navigation list item fill the available width. */
+    .site-nav ul li {
+        width: 100%;
+    }
+
+/* Makes each mobile navigation link a full-width, centred tap target. */
+    .site-nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .site-nav ul li a:hover,
+    .site-nav ul li a[aria-current="page"] {
+    background-color: rgba(255,255,255,0.12);
+    border-bottom: 2px solid #F97316;
+}
+
+}
