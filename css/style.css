@@ -604,3 +604,17 @@ button, input, select, textarea { font: inherit; }
 .faq-answer p {
     margin: 0;
 }
+/* FORM FEEDBACK MESSAGE */
+/* Styles the form validation feedback message with spacing, padding, rounded corners, and bold text. */
+#form-message {
+    margin: 15px 0 0;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+ 
+/* Hides the feedback message element when it contains no text. */
+#form-message:empty {
+    display: none;
+}
