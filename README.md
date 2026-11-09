@@ -1,4 +1,5 @@
 Pwani Youth Hub — Group B Project
+
 Project overview
 We developed a responsive and interactive website for Pwani Youth Hub, a fictional youth community organisation based in Mombasa, Kenya. The organisation runs skills development, sports and mentorship programmes. We designed the website for young people, parents and community partners who want to learn about the organisation and its activities.
 
