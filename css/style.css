@@ -535,4 +535,72 @@ button, input, select, textarea { font: inherit; }
     border-bottom: 2px solid #F97316;
 }
 
+} 
+/* FAQ SECTION */
+/* Sets the FAQ section's maximum width, centres it, and adds outer and inner spacing. */
+.faq-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px 20px;
+}
+
+/* Centres the FAQ heading content and adds space below it. */
+.faq-section .section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Stacks FAQ items vertically with Flexbox and consistent gaps. */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Styles each FAQ item as a light card with a border, rounded corners, and clipped overflow. */
+.faq-item {
+    background-color: #F8FAFC;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Styles each FAQ question button as a full-width Flexbox row with the question and icon at opposite ends. */
+.faq-question {
+    width: 100%;
+    padding: 18px 20px;
+    background-color: #F8FAFC;
+    color: #14532D;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Changes the FAQ question background when the pointer hovers over it. */
+.faq-question:hover {
+    background-color: #e8f1eb;
+}
+
+/* Styles the plus or minus symbol showing the FAQ item's state. */
+.faq-icon {
+    color: #F97316;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Adds spacing and readable text styling to the answer revealed by the accordion. */
+.faq-answer {
+    padding: 0 20px 18px;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* Removes default paragraph margins inside FAQ answers. */
+.faq-answer p {
+    margin: 0;
 }
