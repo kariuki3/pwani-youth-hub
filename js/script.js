@@ -58,4 +58,44 @@ faqQuestions.forEach(function (question) {
     });
 
 });
+// VOLUNTEER FORM VALIDATION
+ 
+// 1. Select the form
+const interestForm = document.querySelector("#interest-form");
+ 
+// 2. Select the message area
+const formMessage = document.querySelector("#form-message");
+ 
+// 3. Listen for form submission
+interestForm.addEventListener("submit", function (event) {
+ 
+    // Prevent the page from refreshing
+    event.preventDefault();
+ 
+    // Check whether the form is valid
+    if (interestForm.checkValidity()) {
+ 
+        // Display a success message
+        formMessage.textContent =
+            "Thank you! Your message has passed validation.";
+ 
+        formMessage.style.color = "#14532D";
+ 
+        // Clear the form fields
+        interestForm.reset();
+ 
+    } else {
+ 
+        // Display an error message
+        formMessage.textContent =
+            "Please complete all required fields correctly.";
+ 
+        formMessage.style.color = "#dc2626";
+ 
+        // Show the browser's validation feedback
+        interestForm.reportValidity();
+ 
+    }
+ 
+});
 
