@@ -49,7 +49,11 @@ After downloading and extracting the project, you can also open index.html in a 
 
 The following contribution summary is based on the commits in our shared GitHub repository.
 Date	Team member	Contribution
+
 7 Nov 2026	James Kariuki (kariuki3)	Set up the initial project repository.
+
 9 Nov 2026	James Kariuki (kariuki3)	Created the initial Home and Gallery pages, added images, refactored the shared CSS and implemented the mobile navigation menu.
+
 9 Nov 2026	Elly Opio (ellyopio)	Created the initial Get Involved page, updated the shared CSS, added the FAQ section and implemented the FAQ accordion.
+
 9 Nov 2026	Chris (KrissTech254)	Created the initial Programmes page, updated the shared CSS, added form feedback and implemented volunteer form validation.
