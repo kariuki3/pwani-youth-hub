@@ -27,4 +27,35 @@ menuToggle.addEventListener("click", function () {
     // Change the button symbol
     menuToggle.textContent = isOpen ? "✕" : "☰";
 
+});// FAQ ACCORDION
+
+// Select all FAQ question buttons
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+// Loop through each question
+faqQuestions.forEach(function (question) {
+
+    // Listen for clicks on each question
+    question.addEventListener("click", function () {
+
+        // Find the answer connected to this question
+        const answerId = question.getAttribute("aria-controls");
+        const answer = document.getElementById(answerId);
+
+        // Check whether the answer is currently open
+        const isOpen = question.getAttribute("aria-expanded") === "true";
+
+        // Open or close the answer
+        answer.hidden = isOpen;
+
+        // Update the accessibility attribute
+        question.setAttribute("aria-expanded", !isOpen);
+
+        // Change the plus symbol to minus or vice versa
+        const icon = question.querySelector(".faq-icon");
+        icon.textContent = isOpen ? "+" : "−";
+
+    });
+
 });
+
